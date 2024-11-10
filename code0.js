@@ -15,7 +15,7 @@ gdjs.MainCode.GDNewSpriteObjects2= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDClickObjectObjects1Objects = Hashtable.newFrom({"ClickObject": gdjs.MainCode.GDClickObjectObjects1});
-gdjs.MainCode.asyncCallback11846828 = function (runtimeScene, asyncObjectsList) {
+gdjs.MainCode.asyncCallback9635252 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.MainCode.localVariables);
 gdjs.copyArray(runtimeScene.getObjects("NewText2"), gdjs.MainCode.GDNewText2Objects2);
 {for(var i = 0, len = gdjs.MainCode.GDNewText2Objects2.length ;i < len;++i) {
@@ -32,7 +32,7 @@ gdjs.MainCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.MainCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(5), (runtimeScene) => (gdjs.MainCode.asyncCallback11846828(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(5), (runtimeScene) => (gdjs.MainCode.asyncCallback9635252(runtimeScene, asyncObjectsList)));
 }
 }
 
