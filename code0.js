@@ -10,10 +10,12 @@ gdjs.MainCode.GDYellowButtonObjects1= [];
 gdjs.MainCode.GDYellowButtonObjects2= [];
 gdjs.MainCode.GDNewText2Objects1= [];
 gdjs.MainCode.GDNewText2Objects2= [];
+gdjs.MainCode.GDNewSpriteObjects1= [];
+gdjs.MainCode.GDNewSpriteObjects2= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDClickObjectObjects1Objects = Hashtable.newFrom({"ClickObject": gdjs.MainCode.GDClickObjectObjects1});
-gdjs.MainCode.asyncCallback10395908 = function (runtimeScene, asyncObjectsList) {
+gdjs.MainCode.asyncCallback11846828 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.MainCode.localVariables);
 gdjs.copyArray(runtimeScene.getObjects("NewText2"), gdjs.MainCode.GDNewText2Objects2);
 {for(var i = 0, len = gdjs.MainCode.GDNewText2Objects2.length ;i < len;++i) {
@@ -30,7 +32,7 @@ gdjs.MainCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.MainCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(5), (runtimeScene) => (gdjs.MainCode.asyncCallback10395908(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(5), (runtimeScene) => (gdjs.MainCode.asyncCallback11846828(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -126,6 +128,27 @@ gdjs.MainCode.eventsList0(runtimeScene);} //End of subevents
 }
 
 
+{
+
+gdjs.copyArray(runtimeScene.getObjects("NewSprite"), gdjs.MainCode.GDNewSpriteObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.MainCode.GDNewSpriteObjects1.length;i<l;++i) {
+    if ( gdjs.MainCode.GDNewSpriteObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.MainCode.GDNewSpriteObjects1[k] = gdjs.MainCode.GDNewSpriteObjects1[i];
+        ++k;
+    }
+}
+gdjs.MainCode.GDNewSpriteObjects1.length = k;
+if (isConditionTrue_0) {
+{gdjs.evtTools.storage.writeNumberInJSONFile("Save", "Close", 1);
+}}
+
+}
+
+
 };
 
 gdjs.MainCode.func = function(runtimeScene) {
@@ -141,6 +164,8 @@ gdjs.MainCode.GDYellowButtonObjects1.length = 0;
 gdjs.MainCode.GDYellowButtonObjects2.length = 0;
 gdjs.MainCode.GDNewText2Objects1.length = 0;
 gdjs.MainCode.GDNewText2Objects2.length = 0;
+gdjs.MainCode.GDNewSpriteObjects1.length = 0;
+gdjs.MainCode.GDNewSpriteObjects2.length = 0;
 
 gdjs.MainCode.eventsList1(runtimeScene);
 gdjs.MainCode.GDClickObjectObjects1.length = 0;
@@ -153,6 +178,8 @@ gdjs.MainCode.GDYellowButtonObjects1.length = 0;
 gdjs.MainCode.GDYellowButtonObjects2.length = 0;
 gdjs.MainCode.GDNewText2Objects1.length = 0;
 gdjs.MainCode.GDNewText2Objects2.length = 0;
+gdjs.MainCode.GDNewSpriteObjects1.length = 0;
+gdjs.MainCode.GDNewSpriteObjects2.length = 0;
 
 
 return;
