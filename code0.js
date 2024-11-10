@@ -15,31 +15,7 @@ gdjs.MainCode.GDNewSpriteObjects2= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDClickObjectObjects1Objects = Hashtable.newFrom({"ClickObject": gdjs.MainCode.GDClickObjectObjects1});
-gdjs.MainCode.asyncCallback10741396 = function (runtimeScene, asyncObjectsList) {
-asyncObjectsList.restoreLocalVariablesContainers(gdjs.MainCode.localVariables);
-gdjs.copyArray(runtimeScene.getObjects("NewText2"), gdjs.MainCode.GDNewText2Objects2);
-{for(var i = 0, len = gdjs.MainCode.GDNewText2Objects2.length ;i < len;++i) {
-    gdjs.MainCode.GDNewText2Objects2[i].hide();
-}
-}gdjs.MainCode.localVariables.length = 0;
-}
 gdjs.MainCode.eventsList0 = function(runtimeScene) {
-
-{
-
-
-{
-{
-const asyncObjectsList = new gdjs.LongLivedObjectsList();
-asyncObjectsList.backupLocalVariablesContainers(gdjs.MainCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(5), (runtimeScene) => (gdjs.MainCode.asyncCallback10741396(runtimeScene, asyncObjectsList)));
-}
-}
-
-}
-
-
-};gdjs.MainCode.eventsList1 = function(runtimeScene) {
 
 {
 
@@ -120,11 +96,12 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("NewText2"), gdjs.MainCode.GDNewText2Objects1);
 {gdjs.evtTools.storage.readNumberFromJSONFile("Save", "MON", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(1));
+}{for(var i = 0, len = gdjs.MainCode.GDNewText2Objects1.length ;i < len;++i) {
+    gdjs.MainCode.GDNewText2Objects1[i].hide();
 }
-{ //Subevents
-gdjs.MainCode.eventsList0(runtimeScene);} //End of subevents
-}
+}}
 
 }
 
@@ -168,7 +145,7 @@ gdjs.MainCode.GDNewText2Objects2.length = 0;
 gdjs.MainCode.GDNewSpriteObjects1.length = 0;
 gdjs.MainCode.GDNewSpriteObjects2.length = 0;
 
-gdjs.MainCode.eventsList1(runtimeScene);
+gdjs.MainCode.eventsList0(runtimeScene);
 gdjs.MainCode.GDClickObjectObjects1.length = 0;
 gdjs.MainCode.GDClickObjectObjects2.length = 0;
 gdjs.MainCode.GDbalObjects1.length = 0;
